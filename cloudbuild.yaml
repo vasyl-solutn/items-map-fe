@@ -1,0 +1,10 @@
+    steps:
+      # Build the React app
+      - name: 'gcr.io/cloud-builders/npm'
+        args: ['install']
+      - name: 'gcr.io/cloud-builders/npm'
+        args: ['run', 'build']
+      # Copy the build to the Cloud Storage bucket
+      - name: 'gcr.io/cloud-builders/gsutil'
+        args: ['-m', 'rsync', '-r', '-c', '-d', './build', 'gs://items-map']
+    timeout: '1600s'
