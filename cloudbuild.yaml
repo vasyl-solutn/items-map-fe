@@ -1,5 +1,5 @@
     steps:
-      # Build the React app
+      # Install and Build the React app
       - name: 'gcr.io/cloud-builders/npm'
         args: ['install']
       - name: 'gcr.io/cloud-builders/npm'
