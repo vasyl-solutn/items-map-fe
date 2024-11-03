@@ -1,3 +1,5 @@
+    options:
+      logging: 'CLOUD_LOGGING_ONLY'
     steps:
       # Install and Build the React app
       - name: 'gcr.io/cloud-builders/npm'
